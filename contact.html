@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nishant Arora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="site-name">
+                <a href="/">Nishant Arora</a>
+            </div>
+            <nav>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/experience" class="nav-link">Experience</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/resume" class="nav-link">Resume</a>
+                <a href="/contact" class="nav-link active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section active">
+            <div class="content">
+                <h2>Contact</h2>
+
+                <p>Feel free to reach out to me through any of the following channels:</p>
+
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/arora-nishant" class="contact-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/yourhandle" class="contact-link" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+
+                <div class="contact-form-section">
+                    <h3>Or send me a message</h3>
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <p class="form-note">Note: Update the form action URL with your Formspree endpoint</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nishant Arora. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -14,123 +14,43 @@
     <header>
         <div class="header-content">
             <div class="site-name">
-                <a href="#home">Nishant Arora</a>
+                <a href="/">Nishant Arora</a>
             </div>
             <nav>
-                <a href="#home" class="nav-link home active" data-section="home">Home</a>
-                <a href="#experience" class="nav-link experience" data-section="experience">Experience</a>
-                <a href="blog.html" class="nav-link blog">Blog</a>
-                <a href="#contact" class="nav-link contact" data-section="contact">Contact</a>
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/experience" class="nav-link">Experience</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/resume" class="nav-link">Resume</a>
+                <a href="/contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="home" class="section active">
+        <section class="section active">
             <div class="content">
-                <h1>Nishant Arora</h1>
-                <p class="tagline">Software Engineer · Builder · Learner</p>
+                <div class="home-container">
+                    <div class="home-intro">
+                        <p class="tagline"><em>Software Engineer / Builder / Learner</em></p>
 
-                <div class="about">
-                    <p>
-                        Hello! I'm Nishant, a software engineer passionate about building elegant solutions to complex problems.
-                    </p>
-                    <p>
-                        I enjoy working on challenging technical problems, learning new technologies,
-                        and sharing knowledge through writing.
-                    </p>
-                    <p>
-                        When I'm not coding, you can find me exploring new ideas, reading, or working on side projects.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section">
-            <div class="content">
-                <h2>Experience</h2>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Software Engineer</h3>
-                        <span class="exp-period">2020 - Present</span>
+                        <div class="about">
+                            <p>
+                                Hello! I'm Nishant, a software engineer passionate about building elegant solutions to complex problems.
+                            </p>
+                            <p>
+                                I enjoy working on challenging technical problems, learning new technologies,
+                                and sharing knowledge through writing.
+                            </p>
+                            <p>
+                                When I'm not coding, you can find me exploring new ideas, reading, or working on side projects.
+                            </p>
+                        </div>
                     </div>
-                    <p class="exp-company">Company Name</p>
-                    <p class="exp-description">
-                        Working on distributed systems, building scalable applications, and mentoring junior developers.
-                        Technologies: Python, Go, JavaScript, AWS, Docker, Kubernetes.
-                    </p>
-                </div>
 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Junior Developer</h3>
-                        <span class="exp-period">2018 - 2020</span>
+                    <div class="home-image">
+                        <img src="profile.jpg" alt="Nishant Arora" class="profile-pic">
+                        <p class="image-placeholder">Add your photo as profile.jpg</p>
                     </div>
-                    <p class="exp-company">Previous Company</p>
-                    <p class="exp-description">
-                        Developed web applications and APIs. Worked with cross-functional teams to deliver quality software.
-                        Technologies: JavaScript, React, Node.js, PostgreSQL.
-                    </p>
-                </div>
-
-                <h2 class="section-subhead">Skills</h2>
-                <div class="skills">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Go</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Kubernetes</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="content">
-                <h2>Contact</h2>
-
-                <p>Feel free to reach out to me through any of the following channels:</p>
-
-                <div class="contact-links">
-                    <a href="mailto:your.email@example.com" class="contact-link" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://github.com/arora-nishant" class="contact-link" target="_blank">
-                        <i class="fab fa-github"></i>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://twitter.com/yourhandle" class="contact-link" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                        <span>Twitter</span>
-                    </a>
-                </div>
-
-                <div class="contact-form-section">
-                    <h3>Or send me a message</h3>
-                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                    <p class="form-note">Note: Update the form action URL with your Formspree endpoint</p>
                 </div>
             </div>
         </section>
@@ -139,7 +59,5 @@
     <footer>
         <p>&copy; 2025 Nishant Arora. All rights reserved.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

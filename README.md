@@ -4,11 +4,13 @@ A clean, classy, and minimalist personal website built for GitHub Pages. Inspire
 
 ## Features
 
-- **Home**: About me section with introduction
+- **Home**: About me section with circular profile picture
 - **Experience**: Professional experience and skills showcase
 - **Blog**: Blog posts with easy publishing workflow
+- **Resume**: PDF viewer with download option
 - **Contact**: Social links with icons + FREE contact form that sends to your email
-- **Beautiful Design**: Greyish side borders, elegant fonts (Lora + Inter), colored navigation
+- **Beautiful Design**: Greyish side borders, elegant fonts (Lora + Inter), unified blue theme
+- **Clean URLs**: / for home, /blog, /experience, /contact, /resume
 - **Fully Responsive**: Looks great on desktop, tablet, and mobile
 
 ## How to Add a New Blog Post
@@ -65,11 +67,26 @@ That's it! Your new post will automatically appear on the blog page.
 
 ### Update Personal Information
 
-Edit `index.html` to update:
-- Your name and tagline
-- About me section
-- Experience and skills
-- Contact links (email, GitHub, LinkedIn, Twitter)
+Edit the HTML files to update:
+- **index.html**: Your tagline and about me section
+- **experience.html**: Your work experience and skills
+- **contact.html**: Contact links (email, GitHub, LinkedIn, Twitter)
+- Update "Nishant Arora" in all files with your name
+
+### Add Your Profile Picture
+
+1. Add your photo as `profile.jpg` in the root directory
+2. The image should be square (or will be cropped to circle)
+3. Recommended size: at least 500x500 pixels for best quality
+4. Supported formats: JPG, PNG, or any web-friendly format
+
+If you don't add a profile picture, you'll see a placeholder message prompting you to add one.
+
+### Add Your Resume
+
+1. Add your resume PDF as `resume.pdf` in the root directory
+2. The resume page will automatically display it with a download button
+3. If the PDF fails to load, users will see a download link instead
 
 ### Set Up the Contact Form (FREE!)
 

@@ -66,8 +66,9 @@ header {
 
 .site-name {
     font-family: 'Lora', Georgia, serif;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .site-name a {
@@ -80,7 +81,7 @@ header {
     color: var(--accent-blue);
 }
 
-/* Navigation with colors */
+/* Navigation - unified blue color */
 nav {
     display: flex;
     gap: 2rem;
@@ -95,22 +96,7 @@ nav {
     padding: 0.4rem 0.8rem;
     border-radius: 4px;
     position: relative;
-}
-
-.nav-link.home {
     color: var(--accent-blue);
-}
-
-.nav-link.experience {
-    color: var(--accent-green);
-}
-
-.nav-link.blog {
-    color: var(--accent-purple);
-}
-
-.nav-link.contact {
-    color: var(--accent-orange);
 }
 
 .nav-link:hover {
@@ -206,7 +192,41 @@ p {
     font-weight: 300;
 }
 
-/* Home section */
+/* Home section with image */
+.home-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.home-intro {
+    padding-right: 2rem;
+}
+
+.home-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+    font-style: italic;
+}
+
 .about {
     margin-top: 2rem;
 }
@@ -428,7 +448,7 @@ p {
 }
 
 .blog-post-title a:hover {
-    color: var(--accent-purple);
+    color: var(--accent-blue);
 }
 
 .blog-post-date {
@@ -443,7 +463,7 @@ p {
 }
 
 .blog-post-link {
-    color: var(--accent-purple);
+    color: var(--accent-blue);
     text-decoration: none;
     font-size: 0.95rem;
     margin-top: 0.5rem;
@@ -544,7 +564,7 @@ p {
 }
 
 .back-link {
-    color: var(--accent-purple);
+    color: var(--accent-blue);
     text-decoration: none;
     font-size: 0.95rem;
     margin-bottom: 2rem;
@@ -553,6 +573,78 @@ p {
 }
 
 .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Resume Page */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent-blue);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.download-btn i {
+    font-size: 1.1rem;
+}
+
+.resume-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 250px);
+    min-height: 600px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--bg-alt);
+}
+
+.resume-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.resume-fallback {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+}
+
+.resume-fallback p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.resume-fallback a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.resume-fallback a:hover {
     text-decoration: underline;
 }
 
@@ -638,6 +730,20 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+    .home-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .home-intro {
+        padding-right: 0;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
     footer {
         padding: 2rem 1.5rem;
     }
@@ -659,6 +765,11 @@ footer p {
     }
 
     .site-name {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Nishant Arora</title>
+    <title>Resume - Nishant Arora</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
             <nav>
                 <a href="/" class="nav-link">Home</a>
                 <a href="/experience" class="nav-link">Experience</a>
-                <a href="/blog" class="nav-link active">Blog</a>
-                <a href="/resume" class="nav-link">Resume</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/resume" class="nav-link active">Resume</a>
                 <a href="/contact" class="nav-link">Contact</a>
             </nav>
         </div>
@@ -29,11 +29,20 @@
     <main>
         <section class="section active">
             <div class="content">
-                <h1>Blog</h1>
-                <p class="blog-intro">Thoughts on technology, software engineering, and life.</p>
+                <div class="resume-header">
+                    <h2>Resume</h2>
+                    <a href="resume.pdf" class="download-btn" download>
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </a>
+                </div>
 
-                <div id="blog-posts">
-                    <!-- Blog posts will be loaded here -->
+                <div class="resume-container">
+                    <iframe src="resume.pdf" class="resume-viewer"></iframe>
+                    <div class="resume-fallback">
+                        <p>Unable to display PDF viewer.</p>
+                        <p>Please <a href="resume.pdf" download>download the PDF</a> to view my resume.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -43,6 +52,15 @@
         <p>&copy; 2025 Nishant Arora. All rights reserved.</p>
     </footer>
 
-    <script src="blog.js"></script>
+    <script>
+        // Check if PDF loaded successfully
+        const iframe = document.querySelector('.resume-viewer');
+        const fallback = document.querySelector('.resume-fallback');
+
+        iframe.addEventListener('error', () => {
+            iframe.style.display = 'none';
+            fallback.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
