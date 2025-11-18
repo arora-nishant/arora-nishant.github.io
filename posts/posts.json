@@ -1,0 +1,16 @@
+[
+    {
+        "id": "welcome-to-my-blog",
+        "title": "Welcome to My Blog",
+        "date": "2025-01-15",
+        "excerpt": "An introduction to this blog and what I plan to write about - technology, software engineering, and lessons learned along the way.",
+        "file": "welcome-to-my-blog.html"
+    },
+    {
+        "id": "building-scalable-systems",
+        "title": "Lessons from Building Scalable Systems",
+        "date": "2025-01-10",
+        "excerpt": "Key insights and best practices I've learned while building and maintaining distributed systems at scale.",
+        "file": "building-scalable-systems.html"
+    }
+]
