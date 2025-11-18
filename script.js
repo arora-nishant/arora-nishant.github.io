@@ -1,7 +1,7 @@
 // Handle section navigation
 document.addEventListener('DOMContentLoaded', () => {
     // Get all navigation links (excluding blog link)
-    const navLinks = document.querySelectorAll('.nav-link:not([href="blog.html"])');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
     const sections = document.querySelectorAll('.section');
 
     // Function to show a specific section
