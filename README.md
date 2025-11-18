@@ -1,13 +1,15 @@
 # Personal Website
 
-A clean, minimalist personal website built for GitHub Pages.
+A clean, classy, and minimalist personal website built for GitHub Pages. Inspired by elegant designs with a focus on readability and user experience.
 
 ## Features
 
 - **Home**: About me section with introduction
-- **Experience**: Professional experience and skills
+- **Experience**: Professional experience and skills showcase
 - **Blog**: Blog posts with easy publishing workflow
-- **Contact**: Contact information and social links
+- **Contact**: Social links with icons + FREE contact form that sends to your email
+- **Beautiful Design**: Greyish side borders, elegant fonts (Lora + Inter), colored navigation
+- **Fully Responsive**: Looks great on desktop, tablet, and mobile
 
 ## How to Add a New Blog Post
 
@@ -67,23 +69,47 @@ Edit `index.html` to update:
 - Your name and tagline
 - About me section
 - Experience and skills
-- Contact links
+- Contact links (email, GitHub, LinkedIn, Twitter)
+
+### Set Up the Contact Form (FREE!)
+
+The website includes a contact form that sends messages directly to your email using [Formspree](https://formspree.io/) - completely free for up to 50 submissions per month.
+
+**Setup steps:**
+1. Go to [https://formspree.io/](https://formspree.io/) and sign up for a free account
+2. Create a new form and get your form endpoint (looks like `https://formspree.io/f/YOUR_FORM_ID`)
+3. In `index.html`, find the contact form and replace `YOUR_FORM_ID` with your actual form ID:
+   ```html
+   <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   ```
+4. Done! Messages will now be sent to your email
 
 ### Styling
 
-The site uses a minimalist design with CSS variables for easy customization. Edit `style.css` and modify the variables in `:root`:
+The site uses a classy, minimalist design with CSS variables for easy customization. Edit `style.css` and modify the variables in `:root`:
 
 ```css
 :root {
-    --text-primary: #2c2c2c;
-    --text-secondary: #666;
-    --text-light: #999;
-    --border-color: #e0e0e0;
-    --accent: #0066cc;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555;
+    --text-light: #888;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-purple: #8b5cf6;
+    --accent-orange: #f59e0b;
     --bg-main: #ffffff;
-    --bg-alt: #fafafa;
+    --bg-alt: #f8f8f8;
+    --bg-border: #e8e8e8;
 }
 ```
+
+### Fonts
+
+The site uses:
+- **Lora** (serif) for headings - elegant and classic
+- **Inter** (sans-serif) for body text - modern and readable
+
+Both fonts are loaded from Google Fonts.
 
 ## Local Development
 
