@@ -27,12 +27,40 @@ document.addEventListener('DOMContentLoaded', async () => {
         const contentResponse = await fetch(`posts/${post.file}`);
         const content = await contentResponse.text();
 
+        // Check if it's a markdown file
+        const isMarkdown = post.file.endsWith('.md');
+        let htmlContent = content;
+
+        if (isMarkdown) {
+            // Configure marked for better rendering
+            marked.setOptions({
+                highlight: function(code, lang) {
+                    if (lang && hljs.getLanguage(lang)) {
+                        return hljs.highlight(code, { language: lang }).value;
+                    }
+                    return hljs.highlightAuto(code).value;
+                },
+                breaks: true,
+                gfm: true
+            });
+
+            // Parse markdown to HTML
+            htmlContent = marked.parse(content);
+        }
+
         // Display the post
         postContent.innerHTML = `
             <h1>${post.title}</h1>
             <div class="post-meta">${formatDate(post.date)}</div>
-            <div class="post-body">${content}</div>
+            <div class="post-body">${htmlContent}</div>
         `;
+
+        // Highlight code blocks if not already done by marked
+        if (!isMarkdown) {
+            postContent.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        }
 
     } catch (error) {
         console.error('Error loading blog post:', error);

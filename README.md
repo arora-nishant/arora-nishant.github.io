@@ -6,46 +6,81 @@ A clean, classy, and minimalist personal website built for GitHub Pages. Inspire
 
 - **Home**: About me section with circular profile picture
 - **Experience**: Professional experience and skills showcase
-- **Blog**: Blog posts with easy publishing workflow
+- **Blog**: Write posts in Markdown with syntax highlighting (100+ languages!)
 - **Resume**: PDF viewer with download option
 - **Contact**: Social links with icons + FREE contact form that sends to your email
 - **Beautiful Design**: Greyish side borders, elegant fonts (Lora + Inter), unified blue theme
 - **Clean URLs**: / for home, /blog, /experience, /contact, /resume
+- **Markdown Support**: Full GFM support with code highlighting, tables, images, and more
 - **Fully Responsive**: Looks great on desktop, tablet, and mobile
 
 ## How to Add a New Blog Post
 
 Adding a new blog post is simple and requires just two steps:
 
-### 1. Create the blog post HTML file
+### 1. Create your blog post in Markdown
 
-Create a new HTML file in the `posts/` directory with your content. For example, `posts/my-new-post.html`:
+Create a new Markdown file in the `posts/` directory. For example, `posts/my-new-post.md`:
 
-```html
-<p>
-    Introduction paragraph for your blog post.
-</p>
+```markdown
+Introduction paragraph for your blog post. Write naturally in markdown!
 
-<h2>Section Heading</h2>
+## Section Heading
 
-<p>
-    Your content here. You can use regular HTML tags for formatting.
-</p>
+Your content here. Markdown makes it easy to format text:
 
-<ul>
-    <li>List items</li>
-    <li>Work great too</li>
-</ul>
+- **Bold text** for emphasis
+- *Italic text* for subtle emphasis
+- [Links](https://example.com) are simple
+- Lists are automatic
 
-<p>
-    You can include <code>inline code</code> and code blocks:
-</p>
+### Code Examples
 
-<pre><code>function example() {
-    console.log("Hello, world!");
+Inline code uses backticks: `const x = 42`
+
+Code blocks with syntax highlighting:
+
+\`\`\`javascript
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+    return true;
 }
-</code></pre>
+\`\`\`
+
+\`\`\`python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+\`\`\`
+
+### Images
+
+![Alt text](image.jpg)
+
+### Tables
+
+| Feature | Status |
+|---------|--------|
+| Markdown | ✅ |
+| Syntax Highlighting | ✅ |
+| Images | ✅ |
+
+---
+
+Use horizontal rules to separate sections.
 ```
+
+**Supported Features:**
+- ✅ Headings (H1-H6)
+- ✅ Bold, italic, strikethrough
+- ✅ Lists (ordered and unordered)
+- ✅ Links and images
+- ✅ Code blocks with syntax highlighting (100+ languages)
+- ✅ Tables
+- ✅ Blockquotes
+- ✅ Horizontal rules
+- ✅ GitHub Flavored Markdown (GFM)
 
 ### 2. Add an entry to posts.json
 
@@ -57,11 +92,13 @@ Edit `posts/posts.json` and add a new entry for your post:
     "title": "My New Blog Post",
     "date": "2025-01-20",
     "excerpt": "A brief summary of what this post is about.",
-    "file": "my-new-post.html"
+    "file": "my-new-post.md"
 }
 ```
 
-That's it! Your new post will automatically appear on the blog page.
+**Note:** Use `.md` extension for Markdown files. The system auto-detects and renders markdown appropriately.
+
+That's it! Your new post will automatically appear on the blog page with full markdown rendering and syntax highlighting.
 
 ## Customization
 
