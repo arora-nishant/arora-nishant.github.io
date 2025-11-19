@@ -1,26 +1,24 @@
 {
   "experience": [
     {
-      "title": "Software Engineer",
-      "company": "Company Name",
-      "period": "2020 - Present",
+      "title": "Lead Data Engineer",
+      "company": "RSystems",
+      "period": "2024 - Present",
       "description": "Working on distributed systems, building scalable applications, and mentoring junior developers. Technologies: Python, Go, JavaScript, AWS, Docker, Kubernetes."
     },
     {
-      "title": "Junior Developer",
-      "company": "Previous Company",
-      "period": "2018 - 2020",
-      "description": "Developed web applications and APIs. Worked with cross-functional teams to deliver quality software. Technologies: JavaScript, React, Node.js, PostgreSQL."
+      "title": "Senior Data Engineer",
+      "company": "Gemini",
+      "period": "2023 - 2024"
     }
   ],
   "skills": [
     "Python",
-    "JavaScript",
-    "Go",
-    "React",
-    "Node.js",
-    "AWS",
-    "Docker",
-    "Kubernetes"
+    "SQL",
+    "Scala",
+    "Spark",
+    "Airflow",
+    "AWS/GCP/Azure",
+    "Data Warehousing"
   ]
 }
