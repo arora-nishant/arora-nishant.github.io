@@ -63,9 +63,9 @@ header {
 }
 
 .site-name {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+    font-family: 'American Typewriter', 'Courier New', Courier, monospace;
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.02em;
     white-space: nowrap;
 }
