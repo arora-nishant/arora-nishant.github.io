@@ -17,6 +17,6 @@ A day passed by with me still thinking about the contest, going through the rank
 
 I immediately called my teammates to tell them, they were shocked but happy of course. I was so happy, didn’t know what to do now so went to the night canteen and ordered a chicken pasta, this time to celebrate.
 
-![ICPC regionals](icpc.png)
+![ICPC regionals](/images/icpc.png)
 
 This email surely is a very good contender for the email which has given me the most joy till present. It was official at this point, we got the Mysore site and we were soon booking flight tickets to Bangalore! It was an incredible experience at the onsite, maybe I will write about it in another post someday. Till then, ciao!
