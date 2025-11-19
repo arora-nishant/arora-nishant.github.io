@@ -36,13 +36,22 @@ function createExperienceItem(exp) {
     const div = document.createElement('div');
     div.className = 'experience-item';
 
+    // Create company element - with optional link
+    let companyHTML = exp.company;
+    if (exp.url) {
+        companyHTML = `<a href="${exp.url}" target="_blank" rel="noopener noreferrer">${exp.company}</a>`;
+    }
+
+    // Only include description if it exists
+    const descriptionHTML = exp.description ? `<p class="exp-description">${exp.description}</p>` : '';
+
     div.innerHTML = `
         <div class="exp-header">
             <h3>${exp.title}</h3>
             <span class="exp-period">${exp.period}</span>
         </div>
-        <p class="exp-company">${exp.company}</p>
-        <p class="exp-description">${exp.description}</p>
+        <p class="exp-company">${companyHTML}</p>
+        ${descriptionHTML}
     `;
 
     return div;
