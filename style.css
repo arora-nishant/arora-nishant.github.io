@@ -851,6 +851,10 @@ footer p {
     .home-image {
         order: 2;
         margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .about {
