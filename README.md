@@ -106,9 +106,32 @@ That's it! Your new post will automatically appear on the blog page with full ma
 
 Edit the HTML files to update:
 - **index.html**: Your tagline and about me section
-- **experience.html**: Your work experience and skills
-- **contact.html**: Contact links (email, GitHub, LinkedIn, Twitter)
+- **contact.html**: Contact links (email, GitHub, LinkedIn)
 - Update "Nishant Arora" in all files with your name
+
+### Update Experience and Skills (Easy!)
+
+Your experience and skills are now data-driven! Simply edit `data.json`:
+
+```json
+{
+  "experience": [
+    {
+      "title": "Your Job Title",
+      "company": "Company Name",
+      "period": "Start - End",
+      "description": "What you did and technologies used."
+    }
+  ],
+  "skills": [
+    "Skill 1",
+    "Skill 2",
+    "Skill 3"
+  ]
+}
+```
+
+Add, remove, or modify entries - the website will automatically load and display them!
 
 ### Add Your Profile Picture
 
@@ -116,8 +139,6 @@ Edit the HTML files to update:
 2. The image should be square (or will be cropped to circle)
 3. Recommended size: at least 500x500 pixels for best quality
 4. Supported formats: JPG, PNG, or any web-friendly format
-
-If you don't add a profile picture, you'll see a placeholder message prompting you to add one.
 
 ### Add Your Resume
 
