@@ -535,6 +535,56 @@ p {
     border: none;
 }
 
+/* Enhanced code highlighting */
+.post-content .post-body pre {
+    position: relative;
+}
+
+.post-content .post-body pre code.hljs {
+    display: block;
+    padding: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Markdown-specific styles */
+.post-content .post-body hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 2.5rem 0;
+}
+
+.post-content .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.post-content .post-body table th,
+.post-content .post-body table td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.post-content .post-body table th {
+    background-color: var(--bg-alt);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.post-content .post-body table tr:hover {
+    background-color: var(--bg-alt);
+}
+
+.post-content .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .post-content .post-body ul,
 .post-content .post-body ol {
     margin-left: 1.5rem;
