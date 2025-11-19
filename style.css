@@ -26,9 +26,9 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-border);
     font-size: 16px;
-    /* Add greyish borders on left and right */
-    border-left: 60px solid var(--bg-border);
-    border-right: 60px solid var(--bg-border);
+    /* Add wider greyish borders on left and right - 2.5x original */
+    border-left: 150px solid var(--bg-border);
+    border-right: 150px solid var(--bg-border);
     min-height: 100vh;
 }
 
@@ -37,8 +37,8 @@ body::before {
     content: '';
     position: fixed;
     top: 0;
-    left: 60px;
-    right: 60px;
+    left: 150px;
+    right: 150px;
     bottom: 0;
     background-color: var(--bg-main);
     z-index: -1;
@@ -47,12 +47,11 @@ body::before {
 /* Header */
 header {
     background-color: var(--bg-main);
-    border-bottom: 2px solid var(--border-color);
-    padding: 1.5rem 0;
+    padding: 2.5rem 0 2rem 0;
+    margin-top: 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 
 .header-content {
@@ -62,11 +61,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4rem;
 }
 
 .site-name {
     font-family: 'Lora', Georgia, serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: -0.02em;
 }
@@ -90,7 +90,7 @@ nav {
 
 .nav-link {
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 0.4rem 0.8rem;
@@ -716,25 +716,25 @@ footer p {
 /* Responsive */
 @media (max-width: 1024px) {
     body {
-        border-left: 40px solid var(--bg-border);
-        border-right: 40px solid var(--bg-border);
+        border-left: 100px solid var(--bg-border);
+        border-right: 100px solid var(--bg-border);
     }
 
     body::before {
-        left: 40px;
-        right: 40px;
+        left: 100px;
+        right: 100px;
     }
 }
 
 @media (max-width: 768px) {
     body {
-        border-left: 20px solid var(--bg-border);
-        border-right: 20px solid var(--bg-border);
+        border-left: 50px solid var(--bg-border);
+        border-right: 50px solid var(--bg-border);
     }
 
     body::before {
-        left: 20px;
-        right: 20px;
+        left: 50px;
+        right: 50px;
     }
 
     h1 {
@@ -801,13 +801,13 @@ footer p {
 
 @media (max-width: 480px) {
     body {
-        border-left: 10px solid var(--bg-border);
-        border-right: 10px solid var(--bg-border);
+        border-left: 25px solid var(--bg-border);
+        border-right: 25px solid var(--bg-border);
     }
 
     body::before {
-        left: 10px;
-        right: 10px;
+        left: 25px;
+        right: 25px;
     }
 
     h1 {
