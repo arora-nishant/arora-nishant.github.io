@@ -59,7 +59,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 .site-name {
@@ -83,7 +83,7 @@ header {
 /* Navigation - unified blue color */
 nav {
     display: flex;
-    gap: 2rem;
+    gap: 1.2rem;
     align-items: center;
 }
 
@@ -195,24 +195,23 @@ p {
 .home-container {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "tagline image"
+        "about image";
     gap: 2rem 4rem;
     align-items: start;
 }
 
 .tagline {
-    grid-column: 1;
-    grid-row: 1;
+    grid-area: tagline;
 }
 
 .home-image {
-    grid-column: 2;
-    grid-row: 1 / 3;
+    grid-area: image;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding-top: 0;
 }
 
 .profile-pic {
@@ -225,9 +224,7 @@ p {
 }
 
 .about {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 0;
+    grid-area: about;
 }
 
 .about p {
@@ -417,6 +414,62 @@ p {
     font-size: 0.85rem;
     color: var(--text-light);
     font-style: italic;
+}
+
+/* Form messages */
+.form-message {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-message-success {
+    background-color: #d1fae5;
+    border: 2px solid #10b981;
+    color: #065f46;
+}
+
+.form-message-error {
+    background-color: #fee2e2;
+    border: 2px solid #ef4444;
+    color: #991b1b;
+}
+
+.form-message p {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.back-home-link {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.back-home-link:hover {
+    color: #047857;
+    text-decoration: underline;
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 /* Blog */
