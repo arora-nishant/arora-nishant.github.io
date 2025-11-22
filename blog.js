@@ -30,7 +30,7 @@ function createPostElement(post) {
     title.className = 'blog-post-title';
 
     const titleLink = document.createElement('a');
-    titleLink.href = `post.html?id=${post.id}`;
+    titleLink.href = `/blog/${post.id}`;
     titleLink.textContent = post.title;
     title.appendChild(titleLink);
 
@@ -38,17 +38,34 @@ function createPostElement(post) {
     date.className = 'blog-post-date';
     date.textContent = formatDate(post.date);
 
+    // Add tags if they exist
+    if (post.tags && post.tags.length > 0) {
+        const tagsDiv = document.createElement('div');
+        tagsDiv.className = 'post-tags';
+        post.tags.forEach(tag => {
+            const tagLink = document.createElement('a');
+            tagLink.href = `/blog/tags/${tag}`;
+            tagLink.className = 'tag-link';
+            tagLink.textContent = tag;
+            tagsDiv.appendChild(tagLink);
+        });
+        article.appendChild(title);
+        article.appendChild(date);
+        article.appendChild(tagsDiv);
+    } else {
+        article.appendChild(title);
+        article.appendChild(date);
+    }
+
     const excerpt = document.createElement('p');
     excerpt.className = 'blog-post-excerpt';
     excerpt.textContent = post.excerpt;
 
     const readMore = document.createElement('a');
-    readMore.href = `post.html?id=${post.id}`;
+    readMore.href = `/blog/${post.id}`;
     readMore.className = 'blog-post-link';
     readMore.textContent = 'Read more →';
 
-    article.appendChild(title);
-    article.appendChild(date);
     article.appendChild(excerpt);
     article.appendChild(readMore);
 

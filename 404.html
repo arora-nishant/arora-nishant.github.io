@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // GitHub Pages 404 router for clean URLs
+        (function() {
+            const path = window.location.pathname;
+
+            // Check if it's a blog post URL: /blog/{post-id}
+            if (path.match(/^\/blog\/[^\/]+\/?$/)) {
+                const parts = path.split('/').filter(p => p);
+                if (parts.length === 2) {
+                    // Redirect to the blog post directory
+                    window.location.href = path.endsWith('/') ? path : path + '/';
+                    return;
+                }
+            }
+
+            // Check if it's a tag URL: /blog/tags/{tag-name}
+            if (path.match(/^\/blog\/tags\/[^\/]+\/?$/)) {
+                // Redirect to the tag page (blog/tags/index.html will handle it)
+                if (!path.endsWith('/')) {
+                    window.location.href = '/blog/tags/';
+                } else {
+                    window.location.href = '/blog/tags/';
+                }
+                return;
+            }
+
+            // For all other 404s, show a proper 404 page
+            window.location.href = '/404-page.html';
+        })();
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

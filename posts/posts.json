@@ -4,6 +4,7 @@
         "title": "My ICPC Story",
         "date": "2019-07-18",
         "excerpt": "How I started competitive programming and went to ACM ICPC Asia Regionals",
-        "file": "my-icpc-story.md"
+        "file": "my-icpc-story.md",
+        "tags": ["personal", "programming"]
     }
 ]
