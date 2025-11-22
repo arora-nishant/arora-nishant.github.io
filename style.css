@@ -1130,3 +1130,23 @@ footer p {
 .rss-link i {
     margin-right: 0.25rem;
 }
+
+/* KaTeX math rendering */
+.katex {
+    font-size: 1.1em;
+}
+
+.katex-display {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Dark mode KaTeX adjustments */
+[data-theme="dark"] .katex {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .katex .mord.text {
+    color: var(--text-primary) !important;
+}

@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const contentResponse = await fetch(`/posts/${post.file}`);
         const content = await contentResponse.text();
 
+        // Calculate reading time
+        const readingTime = calculateReadingTime(content);
+
         // Check if it's markdown
         const isMarkdown = post.file.endsWith('.md');
         let htmlContent;
@@ -69,7 +72,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         postContent.innerHTML = `
             <h1>${post.title}</h1>
-            <div class="post-meta">${post.date}</div>
+            <div class="post-meta">
+                ${formatDate(post.date)} · ${readingTime}
+            </div>
             ${tagsHTML}
             <div class="post-body">${htmlContent}</div>
         `;
@@ -81,8 +86,45 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
+        // Render math equations with KaTeX
+        if (typeof renderMathInElement !== 'undefined') {
+            renderMathInElement(postContent, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\[', right: '\\]', display: true},
+                    {left: '\\(', right: '\\)', display: false}
+                ],
+                throwOnError: false
+            });
+        }
+
     } catch (error) {
         console.error('Error loading post:', error);
         postContent.innerHTML = '<p>Error loading post. Please try again later.</p>';
     }
 });
+
+// Calculate reading time from content
+function calculateReadingTime(text) {
+    // Remove markdown syntax for more accurate word count
+    const plainText = text
+        .replace(/```[\s\S]*?```/g, '') // Remove code blocks
+        .replace(/`[^`]*`/g, '') // Remove inline code
+        .replace(/!\[.*?\]\(.*?\)/g, '') // Remove images
+        .replace(/\[.*?\]\(.*?\)/g, '') // Remove links
+        .replace(/[#*_~]/g, ''); // Remove markdown symbols
+
+    const words = plainText.trim().split(/\s+/).length;
+    const wordsPerMinute = 200;
+    const minutes = Math.ceil(words / wordsPerMinute);
+
+    return `${minutes} min read`;
+}
+
+// Format date to readable format
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
+}

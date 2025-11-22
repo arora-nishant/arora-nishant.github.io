@@ -1,5 +1,13 @@
 [
     {
+        "id": "math-test",
+        "title": "Math Equations Test",
+        "date": "2025-01-22",
+        "excerpt": "Testing KaTeX math rendering with various equations",
+        "file": "math-test.md",
+        "tags": ["test", "math"]
+    },
+    {
         "id": "my-icpc-story",
         "title": "My ICPC Story",
         "date": "2019-07-18",
