@@ -673,6 +673,17 @@ p {
     font-size: 1.1rem;
 }
 
+/* DevIcons use their colored class for brand colors */
+.tech-tag i.devicon {
+    font-size: 1.2rem;
+}
+
+/* Simple Icons styling */
+.tech-tag i.si {
+    font-size: 1.1rem;
+}
+
+/* Fallback generic icon */
 .tech-tag i.fas {
     color: var(--accent-blue);
     font-size: 0.85rem;
