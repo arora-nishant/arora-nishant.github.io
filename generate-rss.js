@@ -10,11 +10,11 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const SITE_URL = 'https://nishanarora.com';
+const SITE_URL = 'https://nishantarora.xyz';
 const SITE_TITLE = 'Nishant Arora';
-const SITE_DESCRIPTION = 'Software Engineer / Builder / Learner - Thoughts on technology, software engineering, and life.';
+const SITE_DESCRIPTION = 'Data Engineer / Builder / Learner';
 const AUTHOR_NAME = 'Nishant Arora';
-const AUTHOR_EMAIL = 'nishant@nishanarora.com'; // Update with your email
+const AUTHOR_EMAIL = 'me@nishantarora.xyz';
 
 // Read posts.json
 const postsPath = path.join(__dirname, 'posts', 'posts.json');
