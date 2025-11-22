@@ -38,6 +38,7 @@
 
 /* Smooth color transitions */
 body,
+body::before,
 header,
 main,
 footer,
@@ -77,6 +78,7 @@ body::before {
     bottom: 0;
     background-color: var(--bg-main);
     z-index: -1;
+    transition: background-color 0.3s ease;
 }
 
 /* Header */
