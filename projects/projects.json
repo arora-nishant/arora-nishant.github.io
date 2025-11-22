@@ -3,7 +3,7 @@
         "id": "distributed-cache",
         "title": "Distributed Cache System",
         "description": "A high-performance distributed caching system with consistent hashing and replication",
-        "tech": ["Go", "Redis", "Docker"],
+        "tech": ["Go", "Redis", "Docker","dbt","airflow","spark","redshift","flyte","sql","snowflake"],
         "file": "distributed-cache.md"
     }
 ]
