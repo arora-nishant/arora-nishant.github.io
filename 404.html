@@ -31,6 +31,17 @@
                 }
             }
 
+            // Check if it's a project URL: /projects/{project-id}
+            if (path.match(/^\/projects\/[^\/]+\/?$/)) {
+                // If URL doesn't have trailing slash, add it and redirect ONCE
+                if (!path.endsWith('/')) {
+                    window.location.href = path + '/';
+                    return;
+                }
+                // If we're already at the canonical URL with trailing slash,
+                // but still 404ing, the project doesn't exist - show 404 page
+            }
+
             // For all other 404s, show a proper 404 page
             window.location.href = '/404-page.html';
         })();
