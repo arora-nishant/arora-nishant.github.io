@@ -9,6 +9,16 @@
     <atom:link href="https://nishantarora.xyz/feed.xml" rel="self" type="application/rss+xml" />
 
     <item>
+        <title>Math Equations Test</title>
+        <link>https://nishanarora.com/blog/math-test</link>
+        <guid isPermaLink="true">https://nishanarora.com/blog/math-test</guid>
+        <pubDate>Wed, 22 Jan 2025 00:00:00 GMT</pubDate>
+        <description>Testing KaTeX math rendering with various equations</description>
+        <category>test</category>
+        <category>math</category>
+    </item>
+
+    <item>
         <title>My ICPC Story</title>
         <link>https://nishantarora.xyz/blog/my-icpc-story/</link>
         <guid isPermaLink="true">https://nishantarora.xyz/blog/my-icpc-story/</guid>
