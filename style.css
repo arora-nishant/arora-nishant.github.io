@@ -38,7 +38,6 @@
 
 /* Smooth color transitions */
 body,
-body::before,
 header,
 main,
 footer,
@@ -929,27 +928,6 @@ footer p {
         padding: 0.4rem 0.8rem;
     }
 
-    /* Mobile: Position toggle button in top-right corner */
-    .theme-toggle {
-        position: fixed;
-        top: 1rem;
-        right: calc(50px + 0.75rem); /* Border width + small padding */
-        width: 40px;
-        height: 40px;
-        padding: 0.5rem;
-        margin: 0;
-        z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    [data-theme="dark"] .theme-toggle {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .theme-toggle i {
-        font-size: 1rem;
-    }
-
     main {
         padding: 0 1.5rem;
     }
@@ -1120,6 +1098,20 @@ footer p {
     border-color: #52525b;
 }
 
+/* Mobile theme toggle adjustments */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+        padding: 0.4rem;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .theme-toggle i {
+        font-size: 1rem;
+    }
+}
 
 /* RSS link in footer */
 .rss-link {
