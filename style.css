@@ -647,6 +647,40 @@ p {
     font-size: 0.95rem;
 }
 
+/* Tech stack for projects */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.tech-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-tag i {
+    color: var(--accent-blue);
+    font-size: 0.85rem;
+}
+
+.tech-tag:hover {
+    background-color: var(--bg-main);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+}
+
 .post-content .post-body {
     line-height: 1.8;
 }

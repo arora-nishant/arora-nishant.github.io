@@ -1,0 +1,9 @@
+[
+    {
+        "id": "distributed-cache",
+        "title": "Distributed Cache System",
+        "description": "A high-performance distributed caching system with consistent hashing and replication",
+        "tech": ["Go", "Redis", "Docker"],
+        "file": "distributed-cache.md"
+    }
+]
