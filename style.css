@@ -20,6 +20,41 @@
     --bg-border: #e8e8e8;
 }
 
+/* Dark mode colors */
+[data-theme="dark"] {
+    --text-primary: #e4e4e7;
+    --text-secondary: #a1a1aa;
+    --text-light: #71717a;
+    --border-color: #3f3f46;
+    --border-heavy: #52525b;
+    --accent-blue: #60a5fa;
+    --accent-green: #34d399;
+    --accent-purple: #a78bfa;
+    --accent-orange: #fbbf24;
+    --bg-main: #18181b;
+    --bg-alt: #27272a;
+    --bg-border: #09090b;
+}
+
+/* Smooth color transitions */
+body,
+header,
+main,
+footer,
+.section,
+.content,
+.blog-post,
+.contact-link,
+.skill-tag,
+.tag-link,
+.form-group input,
+.form-group textarea,
+.contact-form-section,
+pre,
+code {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
@@ -85,6 +120,33 @@ nav {
     display: flex;
     gap: 1.2rem;
     align-items: center;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+    background-color: var(--bg-alt);
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
+}
+
+.theme-toggle i {
+    font-size: 1.1rem;
 }
 
 .nav-link {
@@ -991,5 +1053,62 @@ footer p {
 
     footer {
         padding: 1.5rem 1rem;
+    }
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .form-message-success {
+    background-color: #064e3b;
+    border-color: #34d399;
+    color: #d1fae5;
+}
+
+[data-theme="dark"] .form-message-error {
+    background-color: #7f1d1d;
+    border-color: #f87171;
+    color: #fee2e2;
+}
+
+[data-theme="dark"] .back-home-link {
+    color: #34d399;
+}
+
+[data-theme="dark"] .back-home-link:hover {
+    color: #6ee7b7;
+}
+
+/* Dark mode code block improvements */
+[data-theme="dark"] .post-content .post-body pre {
+    background-color: #1c1c1e;
+    border-color: #3f3f46;
+}
+
+[data-theme="dark"] .post-content .post-body code {
+    background-color: #27272a;
+    border-color: #3f3f46;
+}
+
+/* Dark mode image adjustments - prevent too bright images */
+[data-theme="dark"] img {
+    opacity: 0.9;
+}
+
+[data-theme="dark"] .profile-pic {
+    opacity: 1;
+    border-color: #52525b;
+}
+
+/* Mobile theme toggle adjustments */
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+        padding: 0.4rem;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .theme-toggle i {
+        font-size: 1rem;
     }
 }
