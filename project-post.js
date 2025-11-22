@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         // Fetch project content
-        const contentResponse = await fetch(`/projects/${project.file}`);
+        const contentResponse = await fetch(`/projects-content/${project.file}`);
         let content = await contentResponse.text();
 
         // Calculate reading time
