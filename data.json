@@ -1,26 +1,101 @@
 {
   "experience": [
     {
-      "title": "Software Engineer",
-      "company": "Company Name",
-      "period": "2020 - Present",
-      "description": "Working on distributed systems, building scalable applications, and mentoring junior developers. Technologies: Python, Go, JavaScript, AWS, Docker, Kubernetes."
+      "title": "Lead Data Engineer",
+      "company": "R Systems International Ltd",
+      "period": "Sep 2024 - Present",
+      "url": "https://www.rsystems.com/"
     },
     {
-      "title": "Junior Developer",
-      "company": "Previous Company",
-      "period": "2018 - 2020",
-      "description": "Developed web applications and APIs. Worked with cross-functional teams to deliver quality software. Technologies: JavaScript, React, Node.js, PostgreSQL."
+      "title": "Senior Data Engineer",
+      "company": "Gemini",
+      "period": "Oct 2023 - Aug 2024",
+      "url": "https://www.gemini.com/"
+    }
+    ,
+    {
+      "title": "Senior Data Engineer",
+      "company": "Velotio Technologies",
+      "period": "Apr 2022 - Oct 2023",
+      "url": "https://www.velotio.com/"
+    }
+    ,
+    {
+      "title": "Data Engineer",
+      "company": "Level AI",
+      "period": "Dec 2021 - Mar 2022",
+      "url": "https://thelevel.ai/"
+    }
+    ,
+    {
+      "title": "Data Engineer",
+      "company": "Velotio Technologies",
+      "period": "Jul 2020 - Dec 2021",
+      "url": "https://www.velotio.com/"
+    }
+    ,
+    {
+      "title": "Data Engineering Intern",
+      "company": "Ecom Express",
+      "period": "Jan 2020 - Jun 2020",
+      "url": "https://www.ecomexpress.in/"
+    }
+    ,
+    {
+      "title": "Data Science Intern",
+      "company": "couture.ai",
+      "period": "Jul 2019 - Dec 2019",
+      "url": "https://couture.ai/"
+    }
+    ,
+    {
+      "title": "Software Engineering Intern",
+      "company": "nearbuy.com",
+      "period": "May 2018 - Jul 2018",
+      "url": "https://nearbuy.com/"
+    }
+    ,
+    {
+      "title": "Software Engineering Intern",
+      "company": "nearbuy.com",
+      "period": "May 2017 - Jul 2017",
+      "url": "https://nearbuy.com/"
     }
   ],
   "skills": [
+    "Data Engineering",
+    "Database Engineering",
     "Python",
-    "JavaScript",
-    "Go",
-    "React",
-    "Node.js",
-    "AWS",
-    "Docker",
-    "Kubernetes"
+    "SQL",
+    "Scala",
+    "Spark",
+    "Databricks",
+    "Snowflake",
+    "Airflow",
+    "AWS/GCP/Azure",
+    "Data Warehousing",
+    "Apache Iceberg",
+    "Delta Lake",
+    "ML / AI",
+    "Redshift",
+    "Trino",
+    "Hive",
+    "dbt",
+    "SQL Mesh",
+    "Distributed Systems",
+    "Kafka",
+    "Spark Streaming",
+    "Apache Flink",
+    "Fivetran/Airbyte",
+    "Flink",
+    "Argo",
+    "NoSQL",
+    "Redis",
+    "Java",
+    "Terraform",
+    "k8s",
+    "GraphDBs",
+    "Salesforce",
+    "Business Intelligence"
   ]
 }
