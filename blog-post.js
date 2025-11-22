@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Update page title
         document.title = `${post.title} - Nishant Arora`;
 
+        // Update Open Graph meta tags if function is available
+        if (window.setPostMetaTags) {
+            window.setPostMetaTags(post);
+        }
+
         // Fetch post content
         const contentResponse = await fetch(`/posts/${post.file}`);
         const content = await contentResponse.text();

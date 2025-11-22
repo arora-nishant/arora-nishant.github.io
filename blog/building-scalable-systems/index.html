@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post - Nishant Arora</title>
+    <script src="/meta-tags.js"></script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Nishant Arora">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Nishant Arora" href="https://nishanarora.com/feed.xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
     <link rel="stylesheet" href="/style.css">
@@ -41,7 +52,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Nishant Arora. All rights reserved.</p>
+        <p>
+            &copy; 2025 Nishant Arora. All rights reserved.
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="/feed.xml" class="rss-link" title="Subscribe via RSS">
+                <i class="fas fa-rss"></i> RSS
+            </a>
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>

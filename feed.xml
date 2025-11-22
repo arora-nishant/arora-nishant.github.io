@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>Nishant Arora</title>
+    <link>https://nishanarora.com</link>
+    <description>Software Engineer / Builder / Learner - Thoughts on technology, software engineering, and life.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jul 2019 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://nishanarora.com/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+        <title>My ICPC Story</title>
+        <link>https://nishanarora.com/blog/my-icpc-story</link>
+        <guid isPermaLink="true">https://nishanarora.com/blog/my-icpc-story</guid>
+        <pubDate>Thu, 18 Jul 2019 00:00:00 GMT</pubDate>
+        <description>How I started competitive programming and went to ACM ICPC Asia Regionals</description>
+        <category>personal</category>
+        <category>programming</category>
+    </item>
+
+</channel>
+</rss>
