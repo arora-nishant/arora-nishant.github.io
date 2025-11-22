@@ -207,3 +207,61 @@ This site is designed for GitHub Pages. Simply push to your repository and it wi
 ## License
 
 Feel free to use this as a template for your own personal website!
+
+## RSS Feed
+
+Your website includes an RSS feed at `/feed.xml` that allows readers to subscribe to your blog.
+
+### Updating the RSS Feed
+
+After adding new blog posts, regenerate the RSS feed:
+
+```bash
+node generate-rss.js
+```
+
+This script reads `posts/posts.json` and automatically generates the RSS feed with all your posts.
+
+The RSS link is displayed in the footer of every page for easy subscription.
+
+## Open Graph Meta Tags
+
+Open Graph (OG) tags are included on all pages to provide rich previews when your links are shared on social media (Facebook, Twitter, LinkedIn, Slack, etc.).
+
+### Required: Create OG Default Image
+
+Create a default Open Graph image:
+
+1. **Size**: 1200x630 pixels (1.91:1 ratio)
+2. **Location**: Save as `images/og-default.png`
+3. **Content**: Include your name and tagline
+4. **Tools**: Use Canva, Figma, or any image editor
+
+See `images/OG-IMAGE-README.txt` for detailed instructions.
+
+### Dynamic OG Tags for Blog Posts
+
+Blog posts automatically set their OG tags based on post metadata:
+- Title from post title
+- Description from post excerpt
+- Tags as article tags
+- Custom image if specified in `posts.json` (optional `image` field)
+
+## Dark Mode
+
+The website includes a dark mode toggle:
+- Click the moon/sun icon in the navigation
+- Preference is saved automatically
+- Respects system dark mode preference
+- Works seamlessly across all pages
+
+## Technology Stack
+
+- **HTML5** for semantic structure
+- **CSS3** with CSS Variables for theming
+- **Vanilla JavaScript** for functionality
+- **Markdown** with marked.js for blog posts
+- **Syntax Highlighting** with highlight.js (Atom One Light theme)
+- **Icons** from Font Awesome 6
+- **Fonts**: Charter for headings, system fonts for body
+

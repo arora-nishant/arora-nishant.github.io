@@ -1112,3 +1112,19 @@ footer p {
         font-size: 1rem;
     }
 }
+
+/* RSS link in footer */
+.rss-link {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.rss-link:hover {
+    color: var(--accent-orange);
+}
+
+.rss-link i {
+    margin-right: 0.25rem;
+}
