@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Fetch post content
         const contentResponse = await fetch(`/posts/${post.file}`);
-        const content = await contentResponse.text();
+        let content = await contentResponse.text();
 
         // Calculate reading time
         const readingTime = calculateReadingTime(content);
@@ -44,6 +44,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         let htmlContent;
 
         if (isMarkdown) {
+            // Protect math blocks from markdown processing
+            const mathBlocks = [];
+            const mathPlaceholder = 'MATH_BLOCK_';
+
+            // Extract display math blocks ($$...$$)
+            content = content.replace(/\$\$([\s\S]+?)\$\$/g, (match, equation) => {
+                const id = mathBlocks.length;
+                mathBlocks.push(`\\[${equation}\\]`);
+                return `${mathPlaceholder}${id}`;
+            });
+
+            // Extract inline math blocks ($...$)
+            content = content.replace(/\$([^\$\n]+?)\$/g, (match, equation) => {
+                const id = mathBlocks.length;
+                mathBlocks.push(`\\(${equation}\\)`);
+                return `${mathPlaceholder}${id}`;
+            });
+
             // Configure marked for syntax highlighting
             marked.setOptions({
                 highlight: function(code, lang) {
@@ -57,6 +75,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             htmlContent = marked.parse(content);
+
+            // Restore math blocks
+            htmlContent = htmlContent.replace(new RegExp(`${mathPlaceholder}(\\d+)`, 'g'), (match, id) => {
+                return mathBlocks[parseInt(id)];
+            });
         } else {
             htmlContent = content;
         }
