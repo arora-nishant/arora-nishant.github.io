@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         let tagsHTML = '';
         if (post.tags && post.tags.length > 0) {
             const tagLinks = post.tags.map(tag =>
-                `<a href="/blog/tags/${tag}" class="tag-link">${tag}</a>`
+                `<a href="/blog/tags/?tag=${tag}" class="tag-link">${tag}</a>`
             ).join('');
             tagsHTML = `<div class="post-tags">${tagLinks}</div>`;
         }

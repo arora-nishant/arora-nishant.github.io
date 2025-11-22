@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tagPosts = document.getElementById('tag-posts');
 
     try {
-        // Extract tag from URL path: /blog/tags/{tag-name}/
-        const pathParts = window.location.pathname.split('/').filter(p => p);
-        const tag = pathParts[pathParts.length - 1] || pathParts[pathParts.length - 2];
+        // Extract tag from query parameter: /blog/tags/?tag=personal
+        const urlParams = new URLSearchParams(window.location.search);
+        const tag = urlParams.get('tag');
 
         if (!tag) {
             tagTitle.textContent = 'Tag not found';
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Display posts
         tagPosts.innerHTML = taggedPosts.map(post => {
             const tagsHTML = post.tags.map(t =>
-                `<a href="/blog/tags/${t}" class="tag-link">${t}</a>`
+                `<a href="/blog/tags/?tag=${t}" class="tag-link">${t}</a>`
             ).join('');
 
             return `

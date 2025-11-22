@@ -22,9 +22,13 @@
 
             // Check if it's a tag URL: /blog/tags/{tag-name}
             if (path.match(/^\/blog\/tags\/[^\/]+\/?$/)) {
-                // Redirect to the tag page directory (not specific tag)
-                window.location.href = '/blog/tags/';
-                return;
+                // Extract the tag and redirect to query param format
+                const parts = path.split('/').filter(p => p);
+                const tag = parts[parts.length - 1] || parts[parts.length - 2];
+                if (tag && tag !== 'tags') {
+                    window.location.href = `/blog/tags/?tag=${tag}`;
+                    return;
+                }
             }
 
             // For all other 404s, show a proper 404 page
