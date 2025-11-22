@@ -11,22 +11,19 @@
 
             // Check if it's a blog post URL: /blog/{post-id}
             if (path.match(/^\/blog\/[^\/]+\/?$/)) {
-                const parts = path.split('/').filter(p => p);
-                if (parts.length === 2) {
-                    // Redirect to the blog post directory
-                    window.location.href = path.endsWith('/') ? path : path + '/';
+                // If URL doesn't have trailing slash, add it and redirect ONCE
+                if (!path.endsWith('/')) {
+                    window.location.href = path + '/';
                     return;
                 }
+                // If we're already at the canonical URL with trailing slash,
+                // but still 404ing, the blog post doesn't exist - show 404 page
             }
 
             // Check if it's a tag URL: /blog/tags/{tag-name}
             if (path.match(/^\/blog\/tags\/[^\/]+\/?$/)) {
-                // Redirect to the tag page (blog/tags/index.html will handle it)
-                if (!path.endsWith('/')) {
-                    window.location.href = '/blog/tags/';
-                } else {
-                    window.location.href = '/blog/tags/';
-                }
+                // Redirect to the tag page directory (not specific tag)
+                window.location.href = '/blog/tags/';
                 return;
             }
 
