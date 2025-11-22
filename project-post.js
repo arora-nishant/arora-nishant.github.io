@@ -146,96 +146,115 @@ function calculateReadingTime(text) {
 function getTechIcon(tech) {
     const techLower = tech.toLowerCase();
 
-    // Map technology names to DevIcon classes
-    const iconMap = {
+    // DevIcons mapping (use colored class for brand colors)
+    const deviconMap = {
         // Languages
-        'python': 'devicon-python-plain',
-        'java': 'devicon-java-plain',
-        'javascript': 'devicon-javascript-plain',
-        'typescript': 'devicon-typescript-plain',
-        'go': 'devicon-go-plain',
-        'golang': 'devicon-go-plain',
-        'scala': 'devicon-scala-plain',
-        'rust': 'devicon-rust-plain',
-        'c++': 'devicon-cplusplus-plain',
-        'c': 'devicon-c-plain',
-        'r': 'devicon-r-plain',
+        'python': 'devicon-python-plain colored',
+        'java': 'devicon-java-plain colored',
+        'javascript': 'devicon-javascript-plain colored',
+        'typescript': 'devicon-typescript-plain colored',
+        'go': 'devicon-go-plain colored',
+        'golang': 'devicon-go-plain colored',
+        'scala': 'devicon-scala-plain colored',
+        'rust': 'devicon-rust-plain colored',
+        'c++': 'devicon-cplusplus-plain colored',
+        'c': 'devicon-c-plain colored',
+        'r': 'devicon-r-plain colored',
 
         // Data & Analytics
-        'spark': 'devicon-apachespark-plain',
-        'apache spark': 'devicon-apachespark-plain',
-        'kafka': 'devicon-apachekafka-plain',
-        'apache kafka': 'devicon-apachekafka-plain',
-        'airflow': 'devicon-apache-plain',
-        'apache airflow': 'devicon-apache-plain',
-        'hadoop': 'devicon-hadoop-plain',
-        'flink': 'devicon-apache-plain',
+        'spark': 'devicon-apachespark-plain colored',
+        'apache spark': 'devicon-apachespark-plain colored',
+        'kafka': 'devicon-apachekafka-plain colored',
+        'apache kafka': 'devicon-apachekafka-plain colored',
+        'hadoop': 'devicon-hadoop-plain colored',
 
         // Databases
-        'postgresql': 'devicon-postgresql-plain',
-        'postgres': 'devicon-postgresql-plain',
-        'mysql': 'devicon-mysql-plain',
-        'mongodb': 'devicon-mongodb-plain',
-        'redis': 'devicon-redis-plain',
-        'elasticsearch': 'devicon-elasticsearch-plain',
-        'cassandra': 'devicon-cassandra-plain',
-        'sql': 'devicon-postgresql-plain',
+        'postgresql': 'devicon-postgresql-plain colored',
+        'postgres': 'devicon-postgresql-plain colored',
+        'mysql': 'devicon-mysql-plain colored',
+        'mongodb': 'devicon-mongodb-plain colored',
+        'redis': 'devicon-redis-plain colored',
+        'elasticsearch': 'devicon-elasticsearch-plain colored',
+        'cassandra': 'devicon-cassandra-plain colored',
+        'sql': 'devicon-postgresql-plain colored',
 
         // Cloud Platforms
-        'aws': 'devicon-amazonwebservices-plain-wordmark',
-        'amazon web services': 'devicon-amazonwebservices-plain-wordmark',
-        'gcp': 'devicon-googlecloud-plain',
-        'google cloud': 'devicon-googlecloud-plain',
-        'azure': 'devicon-azure-plain',
-        'microsoft azure': 'devicon-azure-plain',
-
-        // Cloud Services (use cloud icon for specific services)
-        'redshift': 'devicon-amazonwebservices-plain-wordmark',
-        'bigquery': 'devicon-googlecloud-plain',
-        's3': 'devicon-amazonwebservices-plain-wordmark',
-        'lambda': 'devicon-amazonwebservices-plain-wordmark',
-        'ec2': 'devicon-amazonwebservices-plain-wordmark',
-
-        // Data Tools
-        'dbt': 'devicon-dbeaver-plain',
-        'snowflake': 'devicon-postgresql-plain',
-        'databricks': 'devicon-apachespark-plain',
-        'tableau': 'devicon-postgresql-plain',
-        'looker': 'devicon-google-plain',
-        'powerbi': 'devicon-azure-plain',
+        'aws': 'devicon-amazonwebservices-plain-wordmark colored',
+        'amazon web services': 'devicon-amazonwebservices-plain-wordmark colored',
+        'gcp': 'devicon-googlecloud-plain colored',
+        'google cloud': 'devicon-googlecloud-plain colored',
+        'azure': 'devicon-azure-plain colored',
+        'microsoft azure': 'devicon-azure-plain colored',
 
         // Containers & Orchestration
-        'docker': 'devicon-docker-plain',
-        'kubernetes': 'devicon-kubernetes-plain',
-        'k8s': 'devicon-kubernetes-plain',
+        'docker': 'devicon-docker-plain colored',
+        'kubernetes': 'devicon-kubernetes-plain colored',
+        'k8s': 'devicon-kubernetes-plain colored',
 
         // Web Frameworks
-        'react': 'devicon-react-original',
-        'vue': 'devicon-vuejs-plain',
-        'angular': 'devicon-angularjs-plain',
-        'django': 'devicon-django-plain',
-        'flask': 'devicon-flask-original',
-        'fastapi': 'devicon-fastapi-plain',
-        'nodejs': 'devicon-nodejs-plain',
-        'node.js': 'devicon-nodejs-plain',
-        'express': 'devicon-express-original',
+        'react': 'devicon-react-original colored',
+        'vue': 'devicon-vuejs-plain colored',
+        'angular': 'devicon-angularjs-plain colored',
+        'django': 'devicon-django-plain colored',
+        'flask': 'devicon-flask-original colored',
+        'fastapi': 'devicon-fastapi-plain colored',
+        'nodejs': 'devicon-nodejs-plain colored',
+        'node.js': 'devicon-nodejs-plain colored',
+        'express': 'devicon-express-original colored',
 
         // Tools & Platforms
-        'git': 'devicon-git-plain',
-        'github': 'devicon-github-original',
-        'gitlab': 'devicon-gitlab-plain',
-        'jenkins': 'devicon-jenkins-plain',
-        'terraform': 'devicon-terraform-plain',
-        'ansible': 'devicon-ansible-plain',
-        'nginx': 'devicon-nginx-original',
-        'grafana': 'devicon-grafana-plain',
-        'prometheus': 'devicon-prometheus-original',
+        'git': 'devicon-git-plain colored',
+        'github': 'devicon-github-original colored',
+        'gitlab': 'devicon-gitlab-plain colored',
+        'jenkins': 'devicon-jenkins-plain colored',
+        'terraform': 'devicon-terraform-plain colored',
+        'ansible': 'devicon-ansible-plain colored',
+        'nginx': 'devicon-nginx-original colored',
+        'grafana': 'devicon-grafana-plain colored',
+        'prometheus': 'devicon-prometheus-original colored',
     };
 
-    // Return the icon class if found, otherwise return a generic code icon
-    const iconClass = iconMap[techLower];
-    if (iconClass) {
-        return `<i class="${iconClass} colored"></i>`;
+    // Simple Icons mapping (for tools not in DevIcons)
+    const simpleIconMap = {
+        // Data Engineering & Analytics
+        'airflow': 'si si-apacheairflow',
+        'apache airflow': 'si si-apacheairflow',
+        'dbt': 'si si-dbt',
+        'snowflake': 'si si-snowflake',
+        'databricks': 'si si-databricks',
+        'tableau': 'si si-tableau',
+        'looker': 'si si-looker',
+        'powerbi': 'si si-powerbi',
+        'apache flink': 'si si-apacheflink',
+        'flink': 'si si-apacheflink',
+
+        // Cloud Services
+        'redshift': 'si si-amazonredshift',
+        'amazon redshift': 'si si-amazonredshift',
+        'bigquery': 'si si-googlebigquery',
+        'google bigquery': 'si si-googlebigquery',
+        's3': 'si si-amazons3',
+        'amazon s3': 'si si-amazons3',
+        'lambda': 'si si-awslambda',
+        'aws lambda': 'si si-awslambda',
+
+        // Additional tools
+        'pandas': 'si si-pandas',
+        'numpy': 'si si-numpy',
+        'jupyter': 'si si-jupyter',
+        'apache': 'si si-apache',
+        'pytest': 'si si-pytest',
+        'openai': 'si si-openai',
+    };
+
+    // Check DevIcons first
+    if (deviconMap[techLower]) {
+        return `<i class="${deviconMap[techLower]}"></i>`;
+    }
+
+    // Check Simple Icons second
+    if (simpleIconMap[techLower]) {
+        return `<i class="${simpleIconMap[techLower]}"></i>`;
     }
 
     // Fallback to generic code icon
