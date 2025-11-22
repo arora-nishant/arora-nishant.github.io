@@ -44,7 +44,7 @@ function createPostElement(post) {
         tagsDiv.className = 'post-tags';
         post.tags.forEach(tag => {
             const tagLink = document.createElement('a');
-            tagLink.href = `/blog/tags/${tag}`;
+            tagLink.href = `/blog/tags/?tag=${tag}`;
             tagLink.className = 'tag-link';
             tagLink.textContent = tag;
             tagsDiv.appendChild(tagLink);
