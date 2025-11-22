@@ -670,6 +670,10 @@ p {
 }
 
 .tech-tag i {
+    font-size: 1.1rem;
+}
+
+.tech-tag i.fas {
     color: var(--accent-blue);
     font-size: 0.85rem;
 }
