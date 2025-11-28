@@ -16,7 +16,7 @@ A clean, classy, and minimalist personal website built for GitHub Pages. Inspire
 
 ## How to Add a New Blog Post
 
-Adding a new blog post is simple and requires just two steps:
+Adding a new blog post is simple and requires just **two steps** + running the build script:
 
 ### 1. Create your blog post in Markdown
 
@@ -98,7 +98,71 @@ Edit `posts/posts.json` and add a new entry for your post:
 
 **Note:** Use `.md` extension for Markdown files. The system auto-detects and renders markdown appropriately.
 
+### 3. Run the build script
+
+After adding your markdown file and updating `posts.json`, run the build script to auto-generate the blog page:
+
+```bash
+node build-pages.js
+```
+
+This script will:
+- ✅ Read `posts/posts.json` and create `/blog/{post-id}/index.html` for each post
+- ✅ Read `projects/projects.json` and create `/projects/{project-id}/index.html` for each project
+- ✅ Ensure correct navigation bar order across all pages
+- ✅ Set up proper meta tags for social media sharing
+
 That's it! Your new post will automatically appear on the blog page with full markdown rendering and syntax highlighting.
+
+## How to Add a New Project
+
+Adding a new project follows the same simple process:
+
+### 1. Create your project description in Markdown
+
+Create a new Markdown file in the `projects-content/` directory. For example, `projects-content/my-project.md`:
+
+```markdown
+A brief overview of your project, what it does, and why you built it.
+
+## Key Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Technical Details
+
+Explain the architecture, technologies used, and interesting technical challenges.
+
+## Results
+
+Share outcomes, metrics, or lessons learned.
+```
+
+### 2. Add an entry to projects.json
+
+Edit `projects/projects.json` and add a new entry:
+
+```json
+{
+    "id": "my-project",
+    "title": "My Awesome Project",
+    "description": "A brief description of what this project does",
+    "tech": ["Python", "Docker", "AWS", "PostgreSQL"],
+    "file": "my-project.md"
+}
+```
+
+The `tech` array accepts any technology names - the system will automatically display appropriate icons if available.
+
+### 3. Run the build script
+
+```bash
+node build-pages.js
+```
+
+Your project page will be generated at `/projects/my-project/` with full markdown support!
 
 ## Customization
 
