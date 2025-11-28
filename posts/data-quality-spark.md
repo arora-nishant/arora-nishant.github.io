@@ -133,6 +133,7 @@ This feature of Deequ can be really helpful if we want to quickly do some basic 
 Let’s move on to defining and running tests and checks on the data.
 
 <br>
+
 ### Data Validation
 
 For writing tests for our dataset, we use Deequ’s VerificationSuite and add checks on attributes of the dataset.
