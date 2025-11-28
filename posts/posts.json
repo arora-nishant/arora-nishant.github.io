@@ -1,5 +1,21 @@
 [
     {
+        "id": "welcome-to-my-blog",
+        "title": "Welcome to My Blog",
+        "date": "2024-01-01",
+        "excerpt": "Welcome to my personal blog! A space where I share thoughts on technology, software engineering, and lessons learned throughout my career.",
+        "file": "welcome-to-my-blog.md",
+        "tags": ["personal", "introduction"]
+    },
+    {
+        "id": "building-scalable-systems",
+        "title": "Building Scalable Systems",
+        "date": "2024-06-15",
+        "excerpt": "Lessons learned from working on large-scale distributed systems - from starting simple to monitoring everything.",
+        "file": "building-scalable-systems.md",
+        "tags": ["engineering", "systems", "architecture"]
+    },
+    {
         "id": "math-test",
         "title": "Math Equations Test",
         "date": "2025-01-22",
