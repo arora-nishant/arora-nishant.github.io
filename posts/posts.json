@@ -1,5 +1,13 @@
 [
     {
+        "id": "handling-missing-files-in-apache-spark",
+        "title": "Handling missing files in Apache Spark",
+        "date": "2022-01-01",
+        "excerpt": "Encountering Path does not exist error in Spark and handling it gracefully",
+        "file": "missing-files-spark.md",
+        "tags": ["data engineering", "spark"]
+    },
+    {
         "id": "my-icpc-story",
         "title": "My ICPC Story",
         "date": "2019-07-18",
