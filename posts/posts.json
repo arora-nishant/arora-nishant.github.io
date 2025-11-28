@@ -8,6 +8,14 @@
         "tags": ["data engineering", "spark"]
     },
     {
+        "id": "data-quality-deequ-spark",
+        "title": "Data Quality at Scale using Deequ and Apache Spark",
+        "date": "2019-12-31",
+        "excerpt": "Unit Testing of Data and more using Amazon Deequ",
+        "file": "data-quality-spark.md",
+        "tags": ["data engineering", "spark", "data quality", "data governance"]
+    },
+    {
         "id": "my-icpc-story",
         "title": "My ICPC Story",
         "date": "2019-07-18",
