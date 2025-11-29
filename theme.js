@@ -23,8 +23,27 @@
             document.documentElement.removeAttribute('data-theme');
         }
 
+        // Switch syntax highlighting theme
+        switchHighlightTheme(theme);
+
         // Update toggle icon if it exists
         updateToggleIcon(theme);
+    }
+
+    // Switch syntax highlighting theme for code blocks
+    function switchHighlightTheme(theme) {
+        const lightTheme = document.getElementById('highlight-light');
+        const darkTheme = document.getElementById('highlight-dark');
+
+        if (lightTheme && darkTheme) {
+            if (theme === 'dark') {
+                lightTheme.disabled = true;
+                darkTheme.disabled = false;
+            } else {
+                lightTheme.disabled = false;
+                darkTheme.disabled = true;
+            }
+        }
     }
 
     // Update the toggle button icon
