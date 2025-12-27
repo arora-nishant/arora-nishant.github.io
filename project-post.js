@@ -162,8 +162,6 @@ function getTechIcon(tech) {
         'r': 'devicon-r-plain colored',
 
         // Data & Analytics
-        'spark': 'devicon-apachespark-original colored',
-        'apache spark': 'devicon-apachespark-original colored',
         'kafka': 'devicon-apachekafka-plain colored',
         'apache kafka': 'devicon-apachekafka-plain colored',
         'hadoop': 'devicon-hadoop-plain colored',
@@ -227,6 +225,8 @@ function getTechIcon(tech) {
         'powerbi': 'si si-powerbi',
         'apache flink': 'si si-apacheflink',
         'flink': 'si si-apacheflink',
+        'spark': 'si si-apachespark',
+        'apache spark': 'si si-apachespark',
 
         // Cloud Services
         'redshift': 'si si-amazonredshift',
