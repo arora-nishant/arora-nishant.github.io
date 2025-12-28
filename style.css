@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* Reset and base styles */
 * {
@@ -9,11 +9,11 @@
 
 :root {
     --text-primary: #1a1a1a;
-    --text-secondary: #555;
-    --text-light: #888;
+    --text-secondary: #444;
+    --text-light: #6b7280;
     --border-color: #d4d4d4;
     --border-heavy: #c0c0c0;
-    --accent-blue: #3b82f6;
+    --accent-blue: #2563eb;
     --accent-green: #10b981;
     --accent-purple: #8b5cf6;
     --accent-orange: #f59e0b;
@@ -25,8 +25,8 @@
 /* Dark mode colors */
 [data-theme="dark"] {
     --text-primary: #e4e4e7;
-    --text-secondary: #a1a1aa;
-    --text-light: #71717a;
+    --text-secondary: #b0b0b5;
+    --text-light: #9ca3af;
     --border-color: #3f3f46;
     --border-heavy: #52525b;
     --accent-blue: #60a5fa;
@@ -59,7 +59,7 @@ code {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
     color: var(--text-primary);
     background-color: var(--bg-border);
@@ -218,17 +218,17 @@ main {
 
 /* Typography */
 h1 {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     line-height: 1.2;
 }
 
 h2 {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -237,7 +237,7 @@ h2 {
 }
 
 h3 {
-    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+    font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -647,6 +647,7 @@ p {
     color: var(--text-light);
     margin-bottom: 2rem;
     font-size: 0.95rem;
+    font-weight: 500;
 }
 
 /* Tech stack for projects */
@@ -723,8 +724,8 @@ p {
     background-color: var(--bg-alt);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
-    font-family: 'Monaco', 'Courier New', monospace;
-    font-size: 0.9em;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', 'Consolas', monospace;
+    font-size: 0.95em;
     border: 1px solid var(--border-color);
 }
 
@@ -735,6 +736,8 @@ p {
     overflow-x: auto;
     margin: 1.5rem 0;
     border: 1px solid var(--border-color);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Menlo', 'Consolas', monospace;
+    font-size: 0.95em;
 }
 
 .post-content .post-body pre code {
